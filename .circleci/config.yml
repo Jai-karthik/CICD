@@ -202,7 +202,7 @@ jobs:
           command: |
             # curl -H "Content-Type: text/plain" \
             #   -H "token: << memstash-token >>" \
-            #   --request PUT --data "1" \
+            #   --request PUT --data "1" \ 
             #   https://api.memstash.io/values/ #URL incomplete
             
      # Here's where you will add some code to rollback on failure    
