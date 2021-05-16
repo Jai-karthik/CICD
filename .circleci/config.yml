@@ -15,7 +15,7 @@ jobs:
       - run:
           name: Build front-end
           command: |
-            cd ~/frontend
+            cd frontend
             npm i
             npm run build 
             
