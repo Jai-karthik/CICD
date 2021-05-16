@@ -133,7 +133,7 @@ jobs:
             aws cloudformation deploy \
               --template-file .circleci/files/frontend.yml \
               --tags project=udapeople \
-              --stack-name frontene \
+              --stack-name frontendstack \
               --parameter-overrides ID="90033"
               
       # - run:
