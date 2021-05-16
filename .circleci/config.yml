@@ -201,7 +201,7 @@ jobs:
           name: Send migration results to memstash
           command: |
             # curl -H "Content-Type: text/plain" \
-            #   -H "token: << memstash-token >>" \
+            #   -H "token: 12345" \
             #   --request PUT --data "1" \ 
             #   https://api.memstash.io/values/ #URL incomplete
             
