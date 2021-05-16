@@ -2,6 +2,7 @@ version: 2.1
 
 orbs:
   slack: circleci/slack@4.4.2
+  aws-cli: circleci/aws-cli@2.0.0
 
             
 jobs:
@@ -108,9 +109,9 @@ jobs:
             npm audit --audit-level=critical
 
   deploy-infrastructure:
-    docker:
-      # Docker image here that supports AWS CLI
-      - image: circleci/aws-cli:2.0.0
+    # docker:
+    #   # Docker image here that supports AWS CLI
+    #   - image: circleci/aws-cli:2.0.0
 
     steps:
       # Checkout code from git
