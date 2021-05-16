@@ -33,7 +33,7 @@ jobs:
       - run:
           name: Back-end build
           command: |
-            cd ~/backend
+            cd backend
             npm i
             npm run build
            
@@ -54,7 +54,7 @@ jobs:
       - run:
           name: Front-end test
           command: |
-            cd ~/frontend
+            cd frontend
             npm run test
 
   test-backend:
@@ -70,7 +70,7 @@ jobs:
       - run:
           name: Back-end test
           command: |
-            cd ~/backend
+            cd backend
             npm run test
             
   scan-frontend:
@@ -87,7 +87,7 @@ jobs:
       - run:
           name: Front-end scan
           command: |
-            cd ~/frontend
+            cd frontend
             npm audit --audit-level=critical
 
   scan-backend:
@@ -104,13 +104,14 @@ jobs:
       - run:
           name: Back-end scan
           command: |
-            cd ~/backend
+            cd backend
             npm audit --audit-level=critical
 
   deploy-infrastructure:
     docker:
       # Docker image here that supports AWS CLI
-      - image: circleci/aws-cli
+      - image: circleci/aws-cli@2.0.0
+      
     steps:
       # Checkout code from git
       - checkout
