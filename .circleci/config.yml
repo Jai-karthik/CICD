@@ -119,7 +119,6 @@ jobs:
             cd ~/frontend
             npm audit --audit-level=critical
 
-
   scan-backend:
     docker:
       # Docker image here
